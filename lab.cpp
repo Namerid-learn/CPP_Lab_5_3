@@ -14,13 +14,13 @@ void function() {
         return;
     }
 
-    while (cin.fail() || (isdigit(c) == false)) {
-        cout << "Ошибка ввода" << endl;
+    if (cin.fail() || (isdigit(c) == false)) {
+        cout << endl << "Ошибка ввода" << endl;
         return;
     }
 
     if ((int)c % 2 != 0) {
-        cout << c << endl;
+        cout << c;
     }
 
     function();
