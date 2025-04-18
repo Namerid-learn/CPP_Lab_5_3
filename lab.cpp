@@ -6,19 +6,21 @@ using namespace std;
 
 void function() {
 
-    int numb;
+    char c;
 
-    while (!(cin >> numb) || numb < 0 || cin.fail()) {
+    c = cin.get();
+
+    if (c == '0') {
+        return;
+    }
+
+    while (cin.fail() || (isdigit(c) == false)) {
         cout << "Îøèáêà ââîäà" << endl;
         return;
     }
 
-    if (numb == 0) {
-        return;
-    }
-
-    if (numb % 2 != 0) {
-        cout << numb << endl;
+    if ((int)c % 2 != 0) {
+        cout << c << endl;
     }
 
     function();
